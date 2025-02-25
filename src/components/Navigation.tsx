@@ -7,13 +7,16 @@ const Navigation = () => {
   const location = useLocation();
   const profileImage = "/sans.JPG";
 
+  // Check if the current page is the About section
+  const isAboutPage = location.pathname === "/about";
+
   return (
     <>
       {/* Top Marquee Bar */}
-      <div className="fixed top-0 w-full bg-black text-white py-2 overflow-hidden">
+      <div className={`fixed top-0 w-full py-2 overflow-hidden transition-all duration-300 ${isAboutPage ? 'bg-white text-black' : 'bg-black text-white'}`}>
         <div className="animate-marquee whitespace-nowrap flex items-center">
           <img src={profileImage} alt="Sanskriti Madahar" className="w-8 h-8 rounded-full mx-4" />
-          <span className="mx-4">MBA BY DEGREE </span>
+          <span className="mx-4">MBA BY DEGREE</span>
           <X className="inline-block mx-4" />
           <span>STRATEGIST BY MINDSET</span>
           <X className="inline-block mx-4" />

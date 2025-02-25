@@ -84,7 +84,7 @@ const Home = () => {
                 : "Hover to blind me!"
               : isMobile
                 ? "Tap to give me sight!"
-                : "Tap to blind me!"}
+                : "Hover to give me sight!"}
           </p>
         </motion.div>
       </div>
