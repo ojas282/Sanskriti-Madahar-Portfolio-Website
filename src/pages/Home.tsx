@@ -32,9 +32,9 @@ const Home = () => {
           className="space-y-6"
         >
           <h1 className="text-6xl font-bold leading-tight">
-            Transforming<br />
-            <span className="text-yellow-400">Business</span><br />
-            Through Innovation
+            Sanskriti<br />
+            <span className="text-yellow-400">Madahar</span><br />
+            MBA Scholar
           </h1>
           <p className="text-xl">
             MBA Scholar specializing in Digital Transformation
@@ -62,8 +62,8 @@ const Home = () => {
           <motion.img
             src={profileImage}
             alt="Sanskriti Madahar"
-            className="relative z-10 w-full h-[600px] object-cover object-center"
-            style={{ transform: 'translateX(-20px) translateY(20px)' }}
+            className="relative z-10 w-full h-[400px] object-cover object-center"
+            style={{ transform: 'translateX(-5px) translateY(20px)' }}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           />
