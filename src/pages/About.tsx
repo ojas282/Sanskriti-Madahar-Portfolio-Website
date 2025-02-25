@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const cardVariants = {
@@ -7,6 +7,11 @@ const cardVariants = {
 };
 
 const About = () => {
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen pt-16 pb-20 bg-black text-yellow-300">
       <motion.div
@@ -39,7 +44,7 @@ const About = () => {
             variants={cardVariants}
             initial="initial"
             animate="animate"
-            className=" text-yellow p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 md:col-span-2"
+            className="text-yellow p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 md:col-span-2"
           >
             <p className="text-xl">
               I'm Sanskriti Madahar, an MBA scholar passionate about business
