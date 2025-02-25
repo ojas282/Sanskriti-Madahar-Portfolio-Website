@@ -28,13 +28,13 @@ const Navigation = () => {
 
       {/* Bottom Navigation Bar */}
       <nav className="fixed bottom-0 w-full bg-white border-t border-black">
-        <div className="grid grid-cols-5 text-xs md:text-sm">
+        <div className="grid grid-cols-5 text-[10px] sm:text-xs md:text-sm">
           {['WORK', 'ABOUT', '', 'EDUCATION', 'CONNECT'].map((item, index) => (
             item ? (
               <Link
                 key={index}
                 to={`/${item.toLowerCase()}`}
-                className="relative py-4 text-center border-r border-black last:border-r-0 group transition-all duration-300 flex-1"
+                className="relative flex-1 flex items-center justify-center py-3 border-r border-black last:border-r-0 group transition-all duration-300"
               >
                 {/* Active Tab Background Indicator */}
                 {location.pathname === `/${item.toLowerCase()}` && (
@@ -42,17 +42,13 @@ const Navigation = () => {
                     layoutId="nav-indicator"
                     className="absolute inset-0 bg-yellow-300"
                     initial={false}
-                    transition={{
-                      type: "spring",
-                      stiffness: 500,
-                      damping: 30,
-                    }}
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
                 )}
 
-                {/* Text & Hover Effects */}
+                {/* Text with Overflow Fix */}
                 <motion.span
-                  className="relative z-10 px-2 py-2 transition-all duration-300 group-hover:text-yellow-700 truncate whitespace-nowrap"
+                  className="relative z-10 px-1 py-1 transition-all duration-300 group-hover:text-yellow-700 overflow-hidden text-ellipsis whitespace-nowrap"
                 >
                   {item}
                 </motion.span>
@@ -66,7 +62,7 @@ const Navigation = () => {
               <Link
                 key={index}
                 to="/"
-                className="flex items-center justify-center border-r border-black last:border-r-0 group flex-1"
+                className="flex-1 flex items-center justify-center border-r border-black last:border-r-0 group"
               >
                 <motion.span
                   className="font-bold text-lg md:text-xl transition-all duration-500 ease-out"
