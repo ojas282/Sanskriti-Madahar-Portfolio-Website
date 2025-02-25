@@ -18,7 +18,7 @@ const Education = () => {
   };
 
   return (
-    <div className="min-h-screen pt-16 pb-20">
+    <div className="min-h-screen flex flex-col pt-16 pb-20 overflow-y-auto">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -27,7 +27,7 @@ const Education = () => {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-7xl font-bold mb-12"
+          className="text-5xl md:text-6xl font-bold mb-12 text-center"
         >
           Education & Qualifications
         </motion.h1>

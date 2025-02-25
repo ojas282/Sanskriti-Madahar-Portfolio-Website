@@ -13,7 +13,13 @@ const Navigation = () => {
       <div className="fixed top-0 w-full bg-black text-white py-2 overflow-hidden">
         <div className="animate-marquee whitespace-nowrap flex items-center">
           <img src={profileImage} alt="Sanskriti Madahar" className="w-8 h-8 rounded-full mx-4" />
-          <span className="mx-4">HI THERE NICE TO MEET YOU !</span>
+          <span className="mx-4">MBA BY DEGREE </span>
+          <X className="inline-block mx-4" />
+          <span>STRATEGIST BY MINDSET</span>
+          <X className="inline-block mx-4" />
+          <span>DREAMER BY DEFAULT</span>
+          <X className="inline-block mx-4" />
+          <span>HI ! I’M SANSKRITI MADAHAR !</span>
           <X className="inline-block mx-4" />
           <span className="mx-4">SANSKRITI MADAHAR</span>
           <X className="inline-block mx-4" />
@@ -22,13 +28,13 @@ const Navigation = () => {
 
       {/* Bottom Navigation Bar */}
       <nav className="fixed bottom-0 w-full bg-white border-t border-black">
-        <div className="grid grid-cols-5 text-sm">
+        <div className="grid grid-cols-5 text-xs md:text-sm">
           {['WORK', 'ABOUT', '', 'EDUCATION', 'CONNECT'].map((item, index) => (
             item ? (
               <Link
                 key={index}
                 to={`/${item.toLowerCase()}`}
-                className="relative py-4 text-center border-r border-black last:border-r-0 group transition-all duration-300"
+                className="relative py-4 text-center border-r border-black last:border-r-0 group transition-all duration-300 flex-1"
               >
                 {/* Active Tab Background Indicator */}
                 {location.pathname === `/${item.toLowerCase()}` && (
@@ -46,7 +52,7 @@ const Navigation = () => {
 
                 {/* Text & Hover Effects */}
                 <motion.span
-                  className="relative z-10 px-4 py-2 transition-all duration-300 group-hover:text-yellow-700"
+                  className="relative z-10 px-2 py-2 transition-all duration-300 group-hover:text-yellow-700 truncate whitespace-nowrap"
                 >
                   {item}
                 </motion.span>
@@ -60,10 +66,10 @@ const Navigation = () => {
               <Link
                 key={index}
                 to="/"
-                className="flex items-center justify-center border-r border-black last:border-r-0 group"
+                className="flex items-center justify-center border-r border-black last:border-r-0 group flex-1"
               >
                 <motion.span
-                  className="font-bold text-xl transition-all duration-500 ease-out"
+                  className="font-bold text-lg md:text-xl transition-all duration-500 ease-out"
                   whileHover={{
                     scale: 1.2,
                     opacity: 0.8,

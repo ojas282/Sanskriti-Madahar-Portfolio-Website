@@ -53,6 +53,7 @@ const Connect = () => {
             <Twitter size={48} className="mx-auto mb-2" />
             <span>TWITTER</span>
           </a>
+
         </div>
         <p className="text-center text-sm mt-8">© 2024 SANSKRITI MADAHAR</p>
       </motion.div>
