@@ -71,7 +71,9 @@ const Chatbot = () => {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 bg-black text-white p-4 shadow-lg"
+        className="fixed bottom-20 sm:bottom-24 right-6 z-50 p-4 shadow-lg
+             bg-black text-white transition-all duration-300 
+             mix-blend-difference backdrop-invert"
         onClick={() => setIsOpen(true)}
       >
         <MessageSquare size={24} />
