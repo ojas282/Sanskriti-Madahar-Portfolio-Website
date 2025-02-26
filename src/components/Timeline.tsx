@@ -41,7 +41,7 @@ const Timeline = () => {
       <h2 className="text-4xl font-bold mb-12 text-center">Experience & Education</h2>
       <div className="max-w-6xl mx-auto relative">
         {/* Vertical Line (only visible on larger screens) */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-yellow-300 hidden lg:block" />
+
 
         <div className="lg:flex lg:justify-between lg:space-x-12 space-y-8 lg:space-y-0">
           {timelineData.map((item, index) => (

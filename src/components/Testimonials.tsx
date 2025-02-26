@@ -12,8 +12,8 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "David Chen",
-    role: "Chief Innovation Officer",
+    name: "Ojas Kumar Gupta",
+    role: "Software Developer Engineer",
     company: "TechForward Inc.",
     text: "Sanskriti's strategic vision and deep understanding of digital transformation have been instrumental in our company's evolution. Her ability to blend technical knowledge with business acumen is truly remarkable.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100&h=100"
