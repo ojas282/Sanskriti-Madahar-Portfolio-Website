@@ -44,9 +44,8 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white pt-[50px] pb-[60px]">
         <AnimatePresence mode="wait">
-          {/* Show LoadingScreen until loading is false */}
           {loading ? (
             <LoadingScreen onFinish={() => setLoading(false)} />
           ) : (
@@ -55,7 +54,7 @@ function App() {
               <main className="page-transition">
                 <AnimatedRoutes />
               </main>
-              <Chatbot /> {/* Ensure Chatbot is rendered after routes */}
+              <Chatbot />
             </>
           )}
         </AnimatePresence>

@@ -13,7 +13,7 @@ const Navigation = () => {
   return (
     <>
       {/* Top Marquee Bar */}
-      <div className={`fixed top-0 w-full py-2 overflow-hidden transition-all duration-300 ${isAboutPage ? 'bg-white text-black' : 'bg-black text-white'}`}>
+      <div className={`fixed top-0 w-full py-2 overflow-hidden transition-all duration-300 ${isAboutPage ? 'bg-white text-black' : 'bg-black text-white'} z-[9999]`}>
         <div className="animate-marquee whitespace-nowrap flex items-center">
           <img src={profileImage} alt="Sanskriti Madahar" className="w-8 h-8 rounded-full mx-4" />
           <span className="mx-4">MBA BY DEGREE</span>
@@ -30,7 +30,7 @@ const Navigation = () => {
       </div>
 
       {/* Bottom Navigation Bar */}
-      <nav className="fixed bottom-0 w-full bg-white border-t border-black">
+      <nav className="fixed bottom-0 w-full bg-white border-t border-black z-[9999]">
         <div className="grid grid-cols-5 text-[10px] sm:text-xs md:text-sm">
           {['WORK', 'ABOUT', '', 'EDUCATION', 'CONNECT'].map((item, index) => (
             item ? (
