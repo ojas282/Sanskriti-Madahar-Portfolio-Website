@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'r
 import { AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation';
 import LoadingScreen from './components/LoadingScreen';
+import Chatbot from './components/Chatbot'; // Added Chatbot import
 import Home from './pages/Home';
 import Work from './pages/Work';
 import About from './pages/About';
@@ -30,14 +31,22 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 4000);
+    const timer = setTimeout(() => setLoading(false), 4000); // Adjust timing as needed
     return () => clearTimeout(timer);
   }, []);
+
+  // Ensure that after loading is complete, the page scrolls to the top
+  useEffect(() => {
+    if (!loading) {
+      window.scrollTo(0, 0);  // Scroll to top of the page
+    }
+  }, [loading]);
 
   return (
     <Router>
       <div className="min-h-screen bg-white">
         <AnimatePresence mode="wait">
+          {/* Show LoadingScreen until loading is false */}
           {loading ? (
             <LoadingScreen onFinish={() => setLoading(false)} />
           ) : (
@@ -46,6 +55,7 @@ function App() {
               <main className="page-transition">
                 <AnimatedRoutes />
               </main>
+              <Chatbot /> {/* Ensure Chatbot is rendered after routes */}
             </>
           )}
         </AnimatePresence>

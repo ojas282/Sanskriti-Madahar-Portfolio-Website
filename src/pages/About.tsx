@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import Timeline from '../components/Timeline';
+import Testimonials from '../components/Testimonials';
+import ResumeButton from '../components/ResumeButton';
 
 const cardVariants = {
   initial: { opacity: 0, y: 30 },
@@ -7,7 +10,6 @@ const cardVariants = {
 };
 
 const About = () => {
-  // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -44,7 +46,7 @@ const About = () => {
             variants={cardVariants}
             initial="initial"
             animate="animate"
-            className="text-yellow p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 md:col-span-2"
+            className="text-yellow-300 p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 md:col-span-2"
           >
             <p className="text-xl">
               I'm Sanskriti Madahar, an MBA scholar passionate about business
@@ -56,6 +58,9 @@ const About = () => {
               interest in digital transformation, I bring analytical thinking
               and creative problem-solving to every project.
             </p>
+            <div className="mt-6">
+              <ResumeButton />
+            </div>
           </motion.div>
         </div>
 
@@ -76,7 +81,7 @@ const About = () => {
             </ul>
           </div>
 
-          <div className="bg-black text-yellow-300 p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+          <div className="bg-black text-yellow-300 p-8 shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 border border-yellow-300">
             <h3 className="text-2xl font-bold mb-4">Hobbies & Interests</h3>
             <ul className="space-y-2 text-lg">
               <li>• Reading Business Books</li>
@@ -86,6 +91,12 @@ const About = () => {
             </ul>
           </div>
         </motion.div>
+
+        {/* Timeline Section */}
+        <Timeline />
+
+        {/* Testimonials Section */}
+        <Testimonials />
 
         {/* Achievements */}
         <motion.div
