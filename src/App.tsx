@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation';
 import LoadingScreen from './components/LoadingScreen';
@@ -20,6 +20,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/education" element={<Education />} />
         <Route path="/connect" element={<Connect />} />
+        <Route path="*" element={<Navigate to="/" />} /> {/* Redirect unknown routes to Home */}
       </Routes>
     </AnimatePresence>
   );
@@ -29,7 +30,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 4000); // Sync with animation timing
+    const timer = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
 
