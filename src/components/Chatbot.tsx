@@ -83,7 +83,7 @@ const Chatbot = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
-            className="fixed bottom-24 right-6 w-[450px] bg-white shadow-xl rounded-lg z-40 border-2 border-black"
+            className="fixed bottom-24 right-6 w-[90vw] sm:w-[450px] bg-white shadow-xl rounded-lg z-40 border-2 border-black max-h-[90vh] overflow-y-auto"
           >
             <div className="flex justify-between items-center p-4 border-b-2 border-black bg-yellow-300">
               <div className="flex items-center gap-2">
@@ -113,8 +113,8 @@ const Chatbot = () => {
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setSelectedCategory(category)}
                         className={`px-4 py-2 rounded-full whitespace-nowrap ${selectedCategory === category
-                            ? 'bg-yellow-300 text-black'
-                            : 'bg-gray-200 text-gray-700'
+                          ? 'bg-yellow-300 text-black'
+                          : 'bg-gray-200 text-gray-700'
                           }`}
                       >
                         {category}
