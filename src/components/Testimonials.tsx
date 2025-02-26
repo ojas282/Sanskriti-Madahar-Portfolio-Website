@@ -16,21 +16,21 @@ const testimonials: Testimonial[] = [
     role: "Software Developer Engineer",
     company: "TechForward Inc.",
     text: "Sanskriti's strategic vision and deep understanding of digital transformation have been instrumental in our company's evolution. Her ability to blend technical knowledge with business acumen is truly remarkable.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100&h=100"
+    image: ""
   },
   {
     name: "Sarah Williams",
     role: "Director of Strategy",
     company: "Global Innovations",
     text: "Working with Sanskriti was transformative for our team. Her innovative approaches and leadership skills helped us navigate complex digital challenges with confidence.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100"
+    image: ""
   },
   {
     name: "Michael Rodriguez",
     role: "Head of Digital",
     company: "Creative Solutions Co.",
     text: "Sanskriti brings a unique perspective to every project. Her commitment to excellence and ability to drive meaningful change sets her apart in the industry.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=100&h=100"
+    image: ""
   }
 ];
 
@@ -56,7 +56,7 @@ const Testimonials = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
-            className="bg-black rounded-lg shadow-xl p-8 relative border border-yellow-300"
+            className="bg-black shadow-xl p-8 relative border border-yellow-300"
           >
             <Quote className="absolute text-yellow-300 w-12 h-12 -top-6 -left-6" />
 

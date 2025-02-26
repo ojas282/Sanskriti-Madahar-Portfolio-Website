@@ -18,7 +18,7 @@ const timelineData: TimelineItem[] = [
   {
     year: '2023',
     title: 'Digital Strategy Lead',
-    description: 'Led digital transformation initiatives for Fortune 500 clients',
+    description: 'Led digital transformation initiatives for Fortune 500 clients and more to come.',
     category: 'experience'
   },
   {
@@ -30,7 +30,7 @@ const timelineData: TimelineItem[] = [
   {
     year: '2021',
     title: 'Business Analytics Certification',
-    description: 'Advanced certification in data-driven decision making',
+    description: 'Advanced certification in data-driven decision making as well as in python.',
     category: 'education'
   }
 ];
@@ -43,7 +43,7 @@ const Timeline = () => {
         {/* Vertical Line (only visible on larger screens) */}
 
 
-        <div className="lg:flex lg:justify-between lg:space-x-12 space-y-8 lg:space-y-0">
+        <div className="lg:flex lg:flex-wrap lg:justify-between space-y-8 lg:space-y-0">
           {timelineData.map((item, index) => (
             <motion.div
               key={index}
@@ -51,14 +51,14 @@ const Timeline = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className={`relative w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:text-right lg:pl-8' : 'lg:text-left lg:pr-8'}`}
+              className={`relative w-full lg:w-[48%] ${index % 2 === 0 ? 'lg:text-right lg:pl-8' : 'lg:text-left lg:pr-8'}`}
             >
               {/* Dot Indicator */}
               <div
-                className={`absolute top-0 ${index % 2 === 0 ? '-left-3' : '-right-3'} w-6 h-6 bg-yellow-300 rounded-full border-4 border-black shadow-lg`}
+                className={`absolute top-0 ${index % 2 === 1 ? '-left-3' : '-right-3'} w-6 h-6 bg-yellow-300 rounded-full border-4 border-black shadow-lg`}
               />
 
-              <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-yellow-300 hover:scale-105 transition-transform duration-300">
+              <div className="bg-black p-6  shadow-lg hover:shadow-xl transition-shadow border border-yellow-300 hover:scale-105 transition-transform duration-300">
                 <span className="inline-block px-3 py-1 bg-yellow-300 text-black rounded-full text-sm font-medium mb-2">
                   {item.year}
                 </span>

@@ -21,7 +21,7 @@ const ResumeButton = () => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={handleDownload}
-      className="flex items-center gap-2 bg-yellow-300 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition-colors mt-6"
+      className="flex items-center gap-2 bg-yellow-300 text-black px-6 py-3  font-medium hover:bg-yellow-400 transition-colors mt-6"
     >
       <FileDown size={20} />
       Download Resume
